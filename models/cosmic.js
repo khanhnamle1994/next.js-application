@@ -1,13 +1,9 @@
-const config = {
-  bucket: {
-    slug: 'nextjs-website' // add your bucket slug here
-  }
-}
+import config from '../config'
 import Cosmic from 'cosmicjs'
 export default {
   getPage(slug) {
     const data = new Promise(resolve => {
-      Cosmic.getObject(config, { slug }, (err, res) => {
+      Cosmic.getObject(config.cosmic, { slug }, (err, res) => {
         resolve(res)
       })
     })
