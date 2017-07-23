@@ -1,5 +1,15 @@
 {
   "dependencies": {
-    "next": "^2.4.7"
+    "cosmicjs": "^2.35.0",
+    "next": "^2.4.7",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "shorti": "^1.2.6",
+    "yarn": "^0.17.9"
+  },
+  "scripts": {
+    "development": "NODE_ENV=development next",
+    "build": "NODE_ENV=production next build",
+    "start": "yarn run build; NODE_ENV=production next start -p=$PORT"
   }
 }
